@@ -3,7 +3,7 @@ getting and cleaning data project:
 The zip file containing the data can be downloaded here: Assignment 3 Data
 
 Part 1: Plot the 30-day mortality rates for heart attack (outcome.R)
-# install.packages("data.table")
+install.packages("data.table")
 library("data.table")
 
 # Reading in data
@@ -52,7 +52,7 @@ best <- function(state, outcome) {
   out_dt <- out_dt[, .SD ,.SDcols = col_indices]
   
   # Find out what class each column is 
-  # sapply(out_dt,class)
+  sapply(out_dt,class)
   out_dt[, outcome] <- out_dt[,  as.numeric(get(outcome))]
   
   
